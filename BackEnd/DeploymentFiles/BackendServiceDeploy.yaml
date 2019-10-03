@@ -1,0 +1,38 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: microservice
+spec:
+  selector:
+    matchLabels:
+      app: microservice
+      tier: backend
+      track: stable
+  replicas: 7
+  template:
+    metadata:
+      labels:
+        app: microservice
+        tier: backend
+        track: stable
+    spec:
+      containers:
+        - name: microservice
+          image: "itprscli7testeusacr.azurecr.io/microservice:latest"
+          ports:
+            - name: http
+              containerPort: 80
+---
+kind: Service
+apiVersion: v1
+metadata:
+  name: microservice
+spec:
+  selector:
+    app: microservice
+    tier: backend
+  ports:
+  - protocol: TCP
+    port: 80
+    targetPort: http
+  type: ClusterIP
