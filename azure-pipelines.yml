@@ -45,3 +45,10 @@ steps:
     SourceFolder: '$(Build.SourcesDirectory)/FrontEnd'
     Contents: '**'
     TargetFolder: '$(Build.ArtifactStagingDirectory)'
+
+- task: Docker@2
+  inputs:
+    containerRegistry: 'mmgitdemoacr'
+    repository: 'FrontendWebApp'
+    command: 'buildAndPush'
+    Dockerfile: '$(Build.ArtifactStagingDirectory)/**/Dockerfile'
