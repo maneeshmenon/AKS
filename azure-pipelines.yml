@@ -51,4 +51,4 @@ steps:
     containerRegistry: 'mmgitdemoacr'
     repository: 'FrontendWebApp'
     command: 'buildAndPush'
-    Dockerfile: '$(Build.ArtifactStagingDirectory)/**/Dockerfile'
+    Dockerfile: '$(Build.ArtifactStagingDirectory)/FrontendWebApp/FrontendWebApp/Dockerfile'
