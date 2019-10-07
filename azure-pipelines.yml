@@ -38,3 +38,10 @@ steps:
     PathtoPublish: '$(Build.ArtifactStagingDirectory)'
     ArtifactName: 'drop'
     publishLocation: 'Container'
+
+- task: Docker@2
+  inputs:
+    containerRegistry: 'mmgitdemoacr'
+    repository: 'FrontendWebApp'
+    command: 'buildAndPush'
+    Dockerfile: '$(Build.ArtifactStagingDirectory)/**/Dockerfile'
