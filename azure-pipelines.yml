@@ -39,9 +39,9 @@ steps:
     ArtifactName: 'drop'
     publishLocation: 'Container'
 
-- task: Docker@2
+
+- task: CopyFiles@2
   inputs:
-    containerRegistry: 'mmgitdemoacr'
-    repository: 'FrontendWebApp'
-    command: 'buildAndPush'
-    Dockerfile: '$(Build.ArtifactStagingDirectory)/**/Dockerfile'
+    SourceFolder: '**/FrontEnd/'
+    Contents: '**'
+    TargetFolder: '$(Build.ArtifactStagingDirectory)'
