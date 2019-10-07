@@ -1,19 +1,11 @@
-﻿FROM microsoft/dotnet:3.0-aspnetcore-runtime AS base
-WORKDIR /app
-EXPOSE 80
-
-FROM microsoft/dotnet:3.0-sdk AS build
+FROM mcr.microsoft.com/dotnet/core/sdk:2.2 AS build
 WORKDIR /src
-COPY BackendService/BackendService.csproj BackendService/
-RUN dotnet restore BackendService/BackendService.csproj
+COPY BackendService.csproj .
+RUN dotnet restore
 COPY . .
-WORKDIR /src/BackendService
-RUN dotnet build BackendService.csproj -c Release -o /app
+RUN dotnet publish -c release -o /app
 
-FROM build AS publish
-RUN dotnet publish BackendService.csproj -c Release -o /app
-
-FROM base AS final
+FROM mcr.microsoft.com/dotnet/core/aspnet:2.2
 WORKDIR /app
-COPY --from=publish /app .
+COPY --from=build /app .
 ENTRYPOINT ["dotnet", "BackendService.dll"]
