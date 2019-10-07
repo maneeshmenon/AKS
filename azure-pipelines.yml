@@ -42,6 +42,6 @@ steps:
 
 - task: CopyFiles@2
   inputs:
-    SourceFolder: '$(Build.SourcesDirectory)'
+    SourceFolder: '$(Build.SourcesDirectory)/FrontEnd'
     Contents: '**'
     TargetFolder: '$(Build.ArtifactStagingDirectory)'
