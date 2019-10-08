@@ -1,0 +1,38 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: backendservice
+spec:
+  selector:
+    matchLabels:
+      app: backendservice
+      tier: backend
+      track: stable
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: backendservice
+        tier: backend
+        track: stable
+    spec:
+      containers:
+        - name: backendservice
+          image: "mmgitdemoacr.azurecr.io/backendservice:latest"
+          ports:
+            - name: http
+              containerPort: 80
+---
+kind: Service
+apiVersion: v1
+metadata:
+  name: backendservice
+spec:
+  selector:
+    app: backendservice
+    tier: backend
+  ports:
+  - protocol: TCP
+    port: 80
+    targetPort: http
+  type: ClusterIP

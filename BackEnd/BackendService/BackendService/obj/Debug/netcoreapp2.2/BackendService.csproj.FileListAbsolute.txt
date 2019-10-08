@@ -1,0 +1,16 @@
+D:\Replace\BackendService\BackendService\bin\Debug\netcoreapp2.2\appsettings.Development.json
+D:\Replace\BackendService\BackendService\bin\Debug\netcoreapp2.2\appsettings.json
+D:\Replace\BackendService\BackendService\bin\Debug\netcoreapp2.2\Properties\launchSettings.json
+D:\Replace\BackendService\BackendService\bin\Debug\netcoreapp2.2\BackendService.deps.json
+D:\Replace\BackendService\BackendService\bin\Debug\netcoreapp2.2\BackendService.runtimeconfig.json
+D:\Replace\BackendService\BackendService\bin\Debug\netcoreapp2.2\BackendService.runtimeconfig.dev.json
+D:\Replace\BackendService\BackendService\bin\Debug\netcoreapp2.2\BackendService.dll
+D:\Replace\BackendService\BackendService\bin\Debug\netcoreapp2.2\BackendService.pdb
+D:\Replace\BackendService\BackendService\obj\Debug\netcoreapp2.2\BackendService.RazorAssemblyInfo.cache
+D:\Replace\BackendService\BackendService\obj\Debug\netcoreapp2.2\BackendService.RazorAssemblyInfo.cs
+D:\Replace\BackendService\BackendService\obj\Debug\netcoreapp2.2\BackendService.AssemblyInfoInputs.cache
+D:\Replace\BackendService\BackendService\obj\Debug\netcoreapp2.2\BackendService.AssemblyInfo.cs
+D:\Replace\BackendService\BackendService\obj\Debug\netcoreapp2.2\BackendService.RazorTargetAssemblyInfo.cache
+D:\Replace\BackendService\BackendService\obj\Debug\netcoreapp2.2\BackendService.dll
+D:\Replace\BackendService\BackendService\obj\Debug\netcoreapp2.2\BackendService.pdb
+D:\Replace\BackendService\BackendService\obj\Debug\netcoreapp2.2\BackendService.csprojAssemblyReference.cache
