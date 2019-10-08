@@ -1,7 +1,7 @@
 apiVersion: extensions/v1beta1
 kind: Ingress
 metadata:
-  name: aksingress
+  name: myingress
   annotations:
     kubernetes.io/ingress.class: nginx
     nginx.ingress.kubernetes.io/ssl-redirect: "false"
@@ -22,11 +22,11 @@ spec:
         backend:
           serviceName: frontendwebapp
           servicePort: 80
-      - path: /backendwebapi
+      - path: /backendservice
         backend:
-          serviceName: microservice
+          serviceName: backendservice
           servicePort: 80
   tls:
    - hosts:
-     - testing-aks-ingress.westeurope.cloudapp.azure.com
+     - mmgitdemo-aks-dns.southindia.cloudapp.azure.com
      secretName: tls-ingress-secret
