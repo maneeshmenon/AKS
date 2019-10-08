@@ -107,4 +107,3 @@ D:\Users\z003w9ja\Source\GitHub\Workspaces\AKS\BackEnd\BackendService\BackendSer
 D:\Users\z003w9ja\Source\GitHub\Workspaces\AKS\BackEnd\BackendService\BackendService\obj\Debug\netcoreapp3.0\BackendService.csproj.CopyComplete
 D:\Users\z003w9ja\Source\GitHub\Workspaces\AKS\BackEnd\BackendService\BackendService\obj\Debug\netcoreapp3.0\BackendService.dll
 D:\Users\z003w9ja\Source\GitHub\Workspaces\AKS\BackEnd\BackendService\BackendService\obj\Debug\netcoreapp3.0\BackendService.pdb
-D:\Users\z003w9ja\Source\GitHub\Workspaces\AKS\BackEnd\BackendService\BackendService\obj\Debug\netcoreapp3.0\BackendService.csprojAssemblyReference.cache
