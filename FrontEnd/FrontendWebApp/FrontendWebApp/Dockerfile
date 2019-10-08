@@ -1,19 +1,11 @@
-﻿FROM microsoft/dotnet:3.0-aspnetcore-runtime AS base
-WORKDIR /app
-EXPOSE 80
-
-FROM microsoft/dotnet:3.0-sdk AS build
+FROM mcr.microsoft.com/dotnet/core/sdk:3.0 AS build
 WORKDIR /src
-COPY ["FrontendWebApp/FrontendWebApp.csproj", "FrontendWebApp/"]
-RUN dotnet restore "FrontendWebApp/FrontendWebApp.csproj"
+COPY FrontendWebApp.csproj .
+RUN dotnet restore
 COPY . .
-WORKDIR "/src/FrontendWebApp"
-RUN dotnet build "FrontendWebApp.csproj" -c Release -o /app
+RUN dotnet publish -c release -o /app
 
-FROM build AS publish
-RUN dotnet publish "FrontendWebApp.csproj" -c Release -o /app
-
-FROM base AS final
+FROM mcr.microsoft.com/dotnet/core/aspnet:3.0
 WORKDIR /app
-COPY --from=publish /app .
+COPY --from=build /app .
 ENTRYPOINT ["dotnet", "FrontendWebApp.dll"]
