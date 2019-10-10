@@ -18,7 +18,7 @@ spec:
         backend:
           serviceName: frontendwebapp
           servicePort: 80
-      - path: /backendwebapi
+      - path: /backendservice
         backend:
-          serviceName: microservice
+          serviceName: backendservice
           servicePort: 80
