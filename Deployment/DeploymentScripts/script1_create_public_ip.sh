@@ -3,6 +3,9 @@
 #load external file
 . ~/gitclouddrive/AKS/Deployment/DeploymentScripts/config.conf
 
+#set desired subscription
+az account set --subscription $subscription
+
 #get aks cluster location
 akslocation=$(az aks show  --resource-group $aksresourcegroup -n $aksname | grep location | cut -d':' -f 2 | cut -d ',' -f 1 | cut -d'"' -f 2)
 echo $akslocation
