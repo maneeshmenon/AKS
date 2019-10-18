@@ -7,7 +7,7 @@ global:
   tier: frontend
   track: daily 
 
-dnsname: mmgitdemo-aks-dns.southindia.cloudapp.azure.com
+dnsname: 
 
 replicaCount: 1
 
