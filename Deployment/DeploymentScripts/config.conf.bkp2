@@ -1,9 +1,6 @@
 #Following variables will be used while executing the deployment scripts
 
-# Fill values for all the keys before deploying containers.
-# Create unique resources by setting a desired prefix . For example, the prefix used here is 'mmgitdemo'
-
-# The following values are not filled in the config. Instead, they are directly retrieved while executing the scripts
+# The following values can either be filled in the config file or can be directly retrieved while executing the scripts
 # 1. aks cluster location
 # 2. IP of load balancer
 # 3. FQDN / DNS Name
@@ -11,7 +8,10 @@
 
 
 # Subscription
-subscription=
+subscription=f596069f-6c71-4b50-bc42-b3b2cb460b41
+
+# Create unique resources by setting a desired prefix 
+prefix=mmgitdemo
 
 # AKS
 aksresourcegroup=mmgitdemo-aks-rg
