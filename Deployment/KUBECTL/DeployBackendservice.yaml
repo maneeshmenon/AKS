@@ -1,0 +1,48 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: backendservice
+  namespace: aks-demo
+spec:
+  selector:
+    matchLabels:
+      app: backendservice
+      tier: backend
+      track: daily
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: backendservice
+        tier: backend
+        track: daily
+    spec:
+      containers:
+        - name: backendservice
+          image: "mmgitdemoacr.azurecr.io/backendservice:latest"
+          imagePullPolicy: Always
+          resources:
+            requests:
+              cpu: 100m
+              memory: 128Mi
+            limits:
+              cpu: 250m
+              memory: 256Mi
+          ports:
+            - name: http
+              containerPort: 80
+---
+kind: Service
+apiVersion: v1
+metadata:
+  name: backendservice
+  namespace: aks-demo
+spec:
+  selector:
+    app: backendservice
+    tier: backend
+  ports:
+  - protocol: TCP
+    port: 80
+    targetPort: http
+  type: ClusterIP

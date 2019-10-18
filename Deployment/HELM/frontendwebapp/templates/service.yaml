@@ -1,0 +1,18 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: frontendwebapp
+  namespace: {{ .Values.global.namespace }}
+  labels:
+{{ include "frontend.labels" . | indent 4 }}
+spec:
+  selector:
+    app: {{ .Values.global.app }}
+    tier: {{ .Values.global.tier }}
+    track: {{ .Values.global.track }}
+  ports:
+  - protocol: TCP
+    port: 80
+    targetPort: http
+    name: http
+  type: NodePort

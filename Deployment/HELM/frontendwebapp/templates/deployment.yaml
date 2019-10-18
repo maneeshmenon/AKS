@@ -1,0 +1,55 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: frontendwebapp
+  namespace: {{ .Values.global.namespace }}
+  labels:
+{{ include "frontend.labels" . | indent 4 }}
+spec:
+  selector:
+    matchLabels:
+      app: {{ .Values.global.app }}
+      tier: {{ .Values.global.tier }}
+      track: {{ .Values.global.track }}
+  replicas: {{ .Values.replicaCount }}
+  template:
+    metadata:
+      labels:
+        app: {{ .Values.global.app }}
+        tier: {{ .Values.global.tier }}
+        track: {{ .Values.global.track }}
+    spec:
+      containers:
+      - name: nginx
+        image: "{{ .Values.image.repository }}:{{ .Values.image.tag }}"
+        imagePullPolicy: {{ .Values.image.pullPolicy }}
+        ports:
+         - name: http
+           containerPort: 80
+           protocol: TCP
+        livenessProbe:
+         httpGet:
+           path: /
+           port: http
+        readinessProbe:
+         httpGet:
+           path: /
+           port: http
+        resources:
+          {{- toYaml .Values.resources | nindent 12 }}
+        lifecycle:
+          preStop:
+            exec:
+              command: ["/usr/sbin/nginx","-s","quit"]
+      {{- with .Values.nodeSelector }}
+      nodeSelector:
+        {{- toYaml . | nindent 8 }}
+      {{- end }}
+    {{- with .Values.affinity }}
+      affinity:
+        {{- toYaml . | nindent 8 }}
+    {{- end }}
+    {{- with .Values.tolerations }}
+      tolerations:
+        {{- toYaml . | nindent 8 }}
+    {{- end }}

@@ -1,0 +1,41 @@
+#variables for the shell scripts
+# The following values will be filled after resource creation
+# 1. akslocation
+# 2. IP
+# 3. FQDN
+
+subscription=f596069f-6c71-4b50-bc42-b3b2cb460b41
+
+aksresourcegroup=mmgitdemo-aks-rg
+aksname=mmgitdemo-aks
+akslocation=southindia
+DNSNAME=mmgitdemo-aks-dns
+
+#namespace=kube-system
+customnamespace=aks-demo-namespace
+
+publicipresourcename=mmgitdemo-aks-public-ip
+delimiter=_
+publicipresourcegroupname="MC$delimiter$aksresourcegroup$delimiter$aksname$delimiter$akslocation"
+IP=13.71.92.97
+FQDN=mmgitdemo-aks-dns.southindia.cloudapp.azure.com
+suffix=cloudapp.azure.com
+
+#certificate values
+country=IN
+state=KAR
+locality=BLR
+organization=self
+organizationalunit=self
+commonname=$DNSNAME.$akslocation.$suffix
+email=menon.maneesh@gmail.com
+
+#container registry
+containerregistryresourcegroup=mmgitdemo-acr-rg
+containerregistry=mmgitdemoacr.azurecr.io
+containerusername=mmgitdemoacr
+containerpassword=DQcfcTUXE3LrKwPg8H6yh0FT/sFxySdM
+containeremailid=menon.maneesh@gmail.com
+
+#for HELM scripts
+basedirectory=~/clouddrive/

@@ -1,0 +1,36 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: myapachehttpd-deployment
+  namespace: aks-demo
+spec:
+  replicas: 1
+  minReadySeconds: 10
+  strategy:
+    type: RollingUpdate
+    rollingUpdate:
+      maxUnavailable: 1
+      maxSurge: 1
+  template:
+    metadata:
+      labels:
+        app: myapachehttpd
+    spec:
+      containers:
+      - name: myapachehttpd
+        image: httpd:alpine
+        ports:
+        - containerPort: 80
+        imagePullPolicy: Always
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: myapachehttpdservice
+  namespace: aks-demo
+spec:
+  ports:
+    - port: 80
+  selector:
+    app: myapachehttpd
+  type: NodePort
