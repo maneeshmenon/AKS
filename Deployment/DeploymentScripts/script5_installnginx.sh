@@ -22,7 +22,10 @@ helm install stable/nginx-ingress --namespace $customnamespace --name aks-demo -
 while :
 do
         status=$(kubectl get services | grep aks-demo-nginx-ingress-controller | awk {'print $4'} | column -t)
-        echo $status
+        
+		echo $status
+		echo $IP
+		
 
         if [ $status == $IP ]
         then

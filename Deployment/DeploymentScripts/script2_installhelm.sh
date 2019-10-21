@@ -13,7 +13,7 @@
 az account set --subscription $subscription
 
 #set desired kubernetes
-az aks get-credentials --resource-group $aksresourcegroup --name $aksname
+az aks get-credentials --resource-group $aksresourcegroup --name $aksname --overwrite-existing
 
 #Initialize HELM and Tiller
 helm init
