@@ -21,19 +21,19 @@ helm install stable/nginx-ingress --namespace $customnamespace --name aks-demo -
 
 while :
 do
-        status=$(kubectl get services | grep aks-demo-nginx-ingress-controller | awk {'print $4'} | column -t)
-        
-		echo $status
-		echo $IP
-		
+        statusofip=$(kubectl get services | grep aks-demo-nginx-ingress-controller | awk {'print $4'} | column -t)
+        echo 'status of ip'
+        echo $statusofip
 
-        if [ $status == $IP ]
+
+        if [ "$statusofip" == "$IP" ]
         then
                 echo 'ip address is assigned to the load  balancer'
                 break
-        else
-               echo 'ip address is not yet assigned to the load balancer. Status will be checked after 30 seconds'
-               sleep 30s
         fi
+
+        echo 'ip address is not yet assigned to the load balancer. Status will be checked after 30 seconds'
+        sleep 30s
+
 done
 echo 'script execution complete'

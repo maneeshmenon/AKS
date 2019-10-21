@@ -11,6 +11,9 @@
 #load external file
 . ~/gitclouddrive/AKS/Deployment/DeploymentScripts/config.conf
 
+#set desired kubernetes
+az aks get-credentials --resource-group $aksresourcegroup --name $aksname --overwrite-existing
+
 #setting context to custom namespace
 kubectl config set-context $(kubectl config current-context) --namespace=$customnamespace
 
