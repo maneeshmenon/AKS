@@ -26,7 +26,7 @@ stages:
         command: buildAndPush
         dockerfile: 'BackEnd/BackendService/BackendService/Dockerfile'
         repository: 'BackendService'
-        containerRegistry: 'mmgitdemoacr'
+        containerRegistry: 'serviceconnectioncontainerregistry'
         tags: |
           $(tag)
           latest
