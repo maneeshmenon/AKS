@@ -1,11 +1,12 @@
-#Deploy DeployIngress.yaml
+#Deploy Ingress service without TLS
 #kubectl create -f ~/gitclouddrive/AKS/Deployment/KUBECTL/DeployIngress.yaml
-#helm install <path of folder>
-
-#Delete Ingress
 #kubectl delete -f ~/gitclouddrive/AKS/Deployment/KUBECTL/DeployIngress.yaml
+
+## Basic HELM commands
+#helm install <path of folder>
 #helm list
-#helm delete <deployment name>
+#helm delete <deployment name> --purge
+
 
 #Deploy ingres with TLS
 ### Note: secret/tls-ingress-secret is used here ###

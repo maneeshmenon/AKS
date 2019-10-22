@@ -8,8 +8,11 @@
 #containeremailid=menon.maneesh@gmail.com
 #customnamespace=aks-demo
 
-#load external file
+#Load config values
 . ~/gitclouddrive/AKS/Deployment/DeploymentScripts/config.conf
+
+#set desired subscription
+az account set --subscription $subscription
 
 #set desired kubernetes
 az aks get-credentials --resource-group $aksresourcegroup --name $aksname --overwrite-existing

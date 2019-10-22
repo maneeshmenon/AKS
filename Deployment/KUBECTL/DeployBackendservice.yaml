@@ -2,7 +2,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: backendservice
-  namespace: aks-demo
+  namespace: aks-demo-namespace
 spec:
   selector:
     matchLabels:
@@ -36,7 +36,7 @@ kind: Service
 apiVersion: v1
 metadata:
   name: backendservice
-  namespace: aks-demo
+  namespace: aks-demo-namespace
 spec:
   selector:
     app: backendservice

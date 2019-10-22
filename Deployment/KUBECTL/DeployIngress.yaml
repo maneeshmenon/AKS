@@ -14,10 +14,6 @@ spec:
         backend:
           serviceName: myapachehttpdservice
           servicePort: 80
-      - path: /mywebapi
-        backend:
-          serviceName: myapiservice
-          servicePort: 80
       - path: /frontendwebapp
         backend:
           serviceName: frontendwebapp
