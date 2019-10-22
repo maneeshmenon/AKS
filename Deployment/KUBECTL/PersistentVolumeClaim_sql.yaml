@@ -10,7 +10,7 @@ parameters:
 kind: PersistentVolumeClaim
 apiVersion: v1
 metadata:
-  name: aks-demo-data
+  name: mssql-data
   annotations:
     volume.beta.kubernetes.io/storage-class: azure-disk
 spec:
@@ -18,4 +18,4 @@ spec:
   - ReadWriteOnce
   resources:
     requests:
-      storage: 1Gi
+      storage: 8Gi
