@@ -7,7 +7,7 @@
 az account set --subscription $subscription
 
 #set desired kubernetes
-az aks get-credentials --resource-group $aksresourcegroup --name $aksname --overwrite-existing
+#az aks get-credentials --resource-group $aksresourcegroup --name $aksname --overwrite-existing
 
 #approach 1: use kubectl
 #kubectl apply -f ~/gitclouddrive/AKS/Deployment/KUBECTL/DeployNamespace.yaml
