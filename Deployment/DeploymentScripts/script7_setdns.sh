@@ -1,11 +1,7 @@
 #set dns to the public ip of the load balancer
 
 #!/bin/bash
-
-# variables: Public IP address and DNS Name to associate with the IP address
-#IP="52.172.29.7"
-#DNSNAME="mmgitdemo-aks-dns"
-
+#variables
 #load external file
 . ~/gitclouddrive/AKS/Deployment/DeploymentScripts/config.conf
 

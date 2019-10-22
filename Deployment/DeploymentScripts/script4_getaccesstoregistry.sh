@@ -2,12 +2,6 @@
 
 #!/bin/sh
 #variables
-#containerregistry=mmgitdemoacr.azurecr.io
-#containerusername=mmgitdemoacr
-#containerpassword=DQcfcTUXE3LrKwPg8H6yh0FT/sFxySdM
-#containeremailid=menon.maneesh@gmail.com
-#customnamespace=aks-demo
-
 #Load config values
 . ~/gitclouddrive/AKS/Deployment/DeploymentScripts/config.conf
 

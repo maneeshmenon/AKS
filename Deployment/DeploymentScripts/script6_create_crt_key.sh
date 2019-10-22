@@ -1,5 +1,6 @@
 #create certificate and key
 
+#variables
 #load external file
 . ~/gitclouddrive/AKS/Deployment/DeploymentScripts/config.conf
 

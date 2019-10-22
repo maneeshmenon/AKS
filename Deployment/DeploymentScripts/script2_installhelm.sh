@@ -2,10 +2,6 @@
 
 #!/bin/sh
 #variables
-#subscription=f596069f-6c71-4b50-bc42-b3b2cb460b41
-#aksresourcegroup=mmgitdemo-aks-rg
-#aksname=mmgitdemo-aks
-
 #Load config values
 . ~/gitclouddrive/AKS/Deployment/DeploymentScripts/config.conf
 

@@ -1,5 +1,6 @@
 #retrieve the fqdn dns name
 
+#variables
 #load external file
 . ~/gitclouddrive/AKS/Deployment/DeploymentScripts/config.conf
 

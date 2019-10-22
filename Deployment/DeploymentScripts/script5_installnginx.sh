@@ -1,8 +1,6 @@
 #Install Ingress Controller using HELM
 
-#namespace=kube-system
-#customenamespace=aks-demo
-
+#variables
 #Load config values
 . ~/gitclouddrive/AKS/Deployment/DeploymentScripts/config.conf
 
