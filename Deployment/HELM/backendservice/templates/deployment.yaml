@@ -28,18 +28,24 @@ spec:
            containerPort: 80
            protocol: TCP
         livenessProbe:
-         httpGet:
-           path: /
-           port: 80
-		 initialDelaySeconds: 30
-		 periodSeconds: 30
+          httpGet:
+            path: /
+            port: 80
+            httpHeaders:
+            - name: Custom-Header
+              value: AllGood
+          initialDelaySeconds: 30
+          periodSeconds: 30
         readinessProbe:
-         httpGet:
-           path: /
-           port: 80
-		 initialDelaySeconds: 15
-		 periodSeconds: 3
-		resources:
+          httpGet:
+            path: /
+            port: 80
+            httpHeaders:
+            - name: Custom-Header
+              value: AllGood
+          initialDelaySeconds: 5
+          periodSeconds: 3
+        resources:
           {{- toYaml .Values.resources | nindent 12 }}
       {{- with .Values.nodeSelector }}
       nodeSelector:
