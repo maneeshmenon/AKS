@@ -11,44 +11,52 @@ namespace BackendService.Controllers
     [ApiController]
     public class HealthController : ControllerBase
     {
-        // GET: api/Health
+
+        // GET api/health/
         [HttpGet]
-        public bool Get([FromHeader]string Host)
+        public ActionResult<bool> Get()
         {
-
             return true;
-
-            //if (Host != null)
-            //{
-            //    return true;
-            //}
-            //else
-            //{
-            //    return false;
-            //}
-            
         }
+
+        //// GET: api/Health
+        //[HttpGet]
+        //public bool Get([FromHeader]string Host)
+        //{
+
+        //    return true;
+
+        //    //if (Host != null)
+        //    //{
+        //    //    return true;
+        //    //}
+        //    //else
+        //    //{
+        //    //    return false;
+        //    //}
+            
+        //}
 
         
-        public bool CheckHealth(string HealthProbe)
-        {
-            String headerToCompare = "KubernetesHealthProbe";
+        //public bool CheckHealth(string HealthProbe)
+        //{
+        //    String headerToCompare = "KubernetesHealthProbe";
 
-            if ((HealthProbe != null) && (HealthProbe != String.Empty))
-            {
-                if (HealthProbe.ToLower().Equals(headerToCompare.ToLower()))
-                {
-                    return true;
-                }
-                else
-                {
-                    return false;
-                }
-            }
-            else
-            {
-                return false;
-            }
-        }
+        //    if ((HealthProbe != null) && (HealthProbe != String.Empty))
+        //    {
+        //        if (HealthProbe.ToLower().Equals(headerToCompare.ToLower()))
+        //        {
+        //            return true;
+        //        }
+        //        else
+        //        {
+        //            return false;
+        //        }
+        //    }
+        //    else
+        //    {
+        //        return false;
+        //    }
+        //}
     }
 }
