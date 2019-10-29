@@ -13,11 +13,28 @@ namespace BackendService.Controllers
     {
         // GET: api/Health
         [HttpGet]
-        public bool Get([FromHeader]string HealthProbe)
+        public bool Get([FromHeader]string Host)
+        {
+
+            return true;
+
+            //if (Host != null)
+            //{
+            //    return true;
+            //}
+            //else
+            //{
+            //    return false;
+            //}
+            
+        }
+
+        
+        public bool CheckHealth(string HealthProbe)
         {
             String headerToCompare = "KubernetesHealthProbe";
 
-            if ( (HealthProbe != null) && (HealthProbe != String.Empty))
+            if ((HealthProbe != null) && (HealthProbe != String.Empty))
             {
                 if (HealthProbe.ToLower().Equals(headerToCompare.ToLower()))
                 {
