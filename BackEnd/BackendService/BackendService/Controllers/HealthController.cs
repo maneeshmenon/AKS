@@ -9,43 +9,43 @@ namespace BackendService.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class HealthController : ControllerBase
+    public class HealthzController : ControllerBase
     {
 
-        //// GET api/health/
+        //// GET api/healthz/
         //[HttpGet]
         //public ActionResult<bool> Get()
         //{
         //    return true;
         //}
 
-        // GET api/health
+        // GET api/healthz
         [HttpGet]
         public ActionResult<IEnumerable<string>> Get()
         {
             return new string[] { "Ready", "Live" };
         }
 
-        // GET api/health/5
+        // GET api/healthz/5
         [HttpGet("{id}")]
         public ActionResult<string> Get(int id)
         {
             return "healthy";
         }
 
-        // POST api/health
+        // POST api/healthz
         [HttpPost]
         public void Post([FromBody] string value)
         {
         }
 
-        // PUT api/health/5
+        // PUT api/healthz/5
         [HttpPut("{id}")]
         public void Put(int id, [FromBody] string value)
         {
         }
 
-        // DELETE api/health/5
+        // DELETE api/healthz/5
         [HttpDelete("{id}")]
         public void Delete(int id)
         {
