@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Replace\\BackendService\\BackendService\\BackendService.csproj": {}
+    "D:\\Users\\z003w9ja\\Source\\GitHub\\Workspaces\\AKS\\BackEnd\\BackendService\\BackendService\\BackendService.csproj": {}
   },
   "projects": {
-    "D:\\Replace\\BackendService\\BackendService\\BackendService.csproj": {
+    "D:\\Users\\z003w9ja\\Source\\GitHub\\Workspaces\\AKS\\BackEnd\\BackendService\\BackendService\\BackendService.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Replace\\BackendService\\BackendService\\BackendService.csproj",
+        "projectUniqueName": "D:\\Users\\z003w9ja\\Source\\GitHub\\Workspaces\\AKS\\BackEnd\\BackendService\\BackendService\\BackendService.csproj",
         "projectName": "BackendService",
-        "projectPath": "D:\\Replace\\BackendService\\BackendService\\BackendService.csproj",
+        "projectPath": "D:\\Users\\z003w9ja\\Source\\GitHub\\Workspaces\\AKS\\BackEnd\\BackendService\\BackendService\\BackendService.csproj",
         "packagesPath": "C:\\Users\\z003w9ja\\.nuget\\packages\\",
-        "outputPath": "D:\\Replace\\BackendService\\BackendService\\obj\\",
+        "outputPath": "D:\\Users\\z003w9ja\\Source\\GitHub\\Workspaces\\AKS\\BackEnd\\BackendService\\BackendService\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Microsoft\\Xamarin\\NuGet\\",
@@ -62,7 +62,7 @@
             },
             "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
               "target": "Package",
-              "version": "[2.2.3, )"
+              "version": "[2.2.4, )"
             }
           },
           "imports": [
