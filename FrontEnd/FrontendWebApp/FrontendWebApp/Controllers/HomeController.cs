@@ -39,7 +39,7 @@ namespace FrontendWebApp.Controllers
             return View();
         }
 
-        public IActionResult Healthz()
+        public IActionResult HealthCheck()
         {
             return View();
 
