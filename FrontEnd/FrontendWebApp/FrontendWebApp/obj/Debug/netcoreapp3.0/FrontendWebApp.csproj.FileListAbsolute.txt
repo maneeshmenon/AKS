@@ -110,6 +110,7 @@ D:\Users\z003w9ja\Source\GitHub\Workspaces\AKS\FrontEnd\FrontendWebApp\FrontendW
 D:\Users\z003w9ja\Source\GitHub\Workspaces\AKS\FrontEnd\FrontendWebApp\FrontendWebApp\obj\Debug\netcoreapp3.0\FrontendWebApp.TagHelpers.input.cache
 D:\Users\z003w9ja\Source\GitHub\Workspaces\AKS\FrontEnd\FrontendWebApp\FrontendWebApp\obj\Debug\netcoreapp3.0\FrontendWebApp.TagHelpers.output.cache
 D:\Users\z003w9ja\Source\GitHub\Workspaces\AKS\FrontEnd\FrontendWebApp\FrontendWebApp\obj\Debug\netcoreapp3.0\FrontendWebApp.RazorCoreGenerate.cache
+D:\Users\z003w9ja\Source\GitHub\Workspaces\AKS\FrontEnd\FrontendWebApp\FrontendWebApp\obj\Debug\netcoreapp3.0\Razor\Views\Home\Healthz.cshtml.g.cs
 D:\Users\z003w9ja\Source\GitHub\Workspaces\AKS\FrontEnd\FrontendWebApp\FrontendWebApp\obj\Debug\netcoreapp3.0\Razor\Views\Home\Index.cshtml.g.cs
 D:\Users\z003w9ja\Source\GitHub\Workspaces\AKS\FrontEnd\FrontendWebApp\FrontendWebApp\obj\Debug\netcoreapp3.0\Razor\Views\Home\Index2.cshtml.g.cs
 D:\Users\z003w9ja\Source\GitHub\Workspaces\AKS\FrontEnd\FrontendWebApp\FrontendWebApp\obj\Debug\netcoreapp3.0\Razor\Views\Home\Privacy.cshtml.g.cs
@@ -124,4 +125,3 @@ D:\Users\z003w9ja\Source\GitHub\Workspaces\AKS\FrontEnd\FrontendWebApp\FrontendW
 D:\Users\z003w9ja\Source\GitHub\Workspaces\AKS\FrontEnd\FrontendWebApp\FrontendWebApp\obj\Debug\netcoreapp3.0\FrontendWebApp.csproj.CopyComplete
 D:\Users\z003w9ja\Source\GitHub\Workspaces\AKS\FrontEnd\FrontendWebApp\FrontendWebApp\obj\Debug\netcoreapp3.0\FrontendWebApp.dll
 D:\Users\z003w9ja\Source\GitHub\Workspaces\AKS\FrontEnd\FrontendWebApp\FrontendWebApp\obj\Debug\netcoreapp3.0\FrontendWebApp.pdb
-D:\Users\z003w9ja\Source\GitHub\Workspaces\AKS\FrontEnd\FrontendWebApp\FrontendWebApp\obj\Debug\netcoreapp3.0\Razor\Views\Home\Healthz.cshtml.g.cs

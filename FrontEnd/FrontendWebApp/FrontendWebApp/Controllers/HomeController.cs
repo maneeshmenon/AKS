@@ -42,6 +42,7 @@ namespace FrontendWebApp.Controllers
         public IActionResult Healthz()
         {
             return View();
+
         }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
