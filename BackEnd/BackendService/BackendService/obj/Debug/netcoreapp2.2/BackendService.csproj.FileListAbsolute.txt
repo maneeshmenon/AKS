@@ -22,7 +22,6 @@ D:\Users\z003w9ja\Source\GitHub\Workspaces\AKS\BackEnd\BackendService\BackendSer
 D:\Users\z003w9ja\Source\GitHub\Workspaces\AKS\BackEnd\BackendService\BackendService\bin\Debug\netcoreapp2.2\BackendService.runtimeconfig.dev.json
 D:\Users\z003w9ja\Source\GitHub\Workspaces\AKS\BackEnd\BackendService\BackendService\bin\Debug\netcoreapp2.2\BackendService.dll
 D:\Users\z003w9ja\Source\GitHub\Workspaces\AKS\BackEnd\BackendService\BackendService\bin\Debug\netcoreapp2.2\BackendService.pdb
-D:\Users\z003w9ja\Source\GitHub\Workspaces\AKS\BackEnd\BackendService\BackendService\obj\Debug\netcoreapp2.2\BackendService.csprojAssemblyReference.cache
 D:\Users\z003w9ja\Source\GitHub\Workspaces\AKS\BackEnd\BackendService\BackendService\obj\Debug\netcoreapp2.2\BackendService.RazorAssemblyInfo.cache
 D:\Users\z003w9ja\Source\GitHub\Workspaces\AKS\BackEnd\BackendService\BackendService\obj\Debug\netcoreapp2.2\BackendService.RazorAssemblyInfo.cs
 D:\Users\z003w9ja\Source\GitHub\Workspaces\AKS\BackEnd\BackendService\BackendService\obj\Debug\netcoreapp2.2\BackendService.AssemblyInfoInputs.cache

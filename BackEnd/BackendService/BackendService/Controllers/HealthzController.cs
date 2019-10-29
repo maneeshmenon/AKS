@@ -12,13 +12,6 @@ namespace BackendService.Controllers
     public class HealthzController : ControllerBase
     {
 
-        //// GET api/healthz/
-        //[HttpGet]
-        //public ActionResult<bool> Get()
-        //{
-        //    return true;
-        //}
-
         // GET api/healthz
         [HttpGet]
         public ActionResult<IEnumerable<string>> Get()
