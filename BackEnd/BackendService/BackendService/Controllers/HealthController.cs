@@ -12,51 +12,43 @@ namespace BackendService.Controllers
     public class HealthController : ControllerBase
     {
 
-        // GET api/health/
+        //// GET api/health/
+        //[HttpGet]
+        //public ActionResult<bool> Get()
+        //{
+        //    return true;
+        //}
+
+        // GET api/health
         [HttpGet]
-        public ActionResult<bool> Get()
+        public ActionResult<IEnumerable<string>> Get()
         {
-            return true;
+            return new string[] { "Ready", "Live" };
         }
 
-        //// GET: api/Health
-        //[HttpGet]
-        //public bool Get([FromHeader]string Host)
-        //{
+        // GET api/health/5
+        [HttpGet("{id}")]
+        public ActionResult<string> Get(int id)
+        {
+            return "healthy";
+        }
 
-        //    return true;
+        // POST api/health
+        [HttpPost]
+        public void Post([FromBody] string value)
+        {
+        }
 
-        //    //if (Host != null)
-        //    //{
-        //    //    return true;
-        //    //}
-        //    //else
-        //    //{
-        //    //    return false;
-        //    //}
-            
-        //}
+        // PUT api/health/5
+        [HttpPut("{id}")]
+        public void Put(int id, [FromBody] string value)
+        {
+        }
 
-        
-        //public bool CheckHealth(string HealthProbe)
-        //{
-        //    String headerToCompare = "KubernetesHealthProbe";
-
-        //    if ((HealthProbe != null) && (HealthProbe != String.Empty))
-        //    {
-        //        if (HealthProbe.ToLower().Equals(headerToCompare.ToLower()))
-        //        {
-        //            return true;
-        //        }
-        //        else
-        //        {
-        //            return false;
-        //        }
-        //    }
-        //    else
-        //    {
-        //        return false;
-        //    }
-        //}
+        // DELETE api/health/5
+        [HttpDelete("{id}")]
+        public void Delete(int id)
+        {
+        }
     }
 }
