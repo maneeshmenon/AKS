@@ -27,24 +27,29 @@ spec:
          - name: http
            containerPort: 80
            protocol: TCP
+        env:
+          - name: START_WAIT_SECS
+            value: '15'
+          - name: CRASH_FACTOR
+            value: '30'
+          - name: SOME_OTHER_VAR
+            value: yassf
         livenessProbe:
           httpGet:
-            path: /
+            path: /api/healthz
             port: 80
             httpHeaders:
-            - name: Custom-Header
-              value: AllGood
-          initialDelaySeconds: 30
-          periodSeconds: 30
+              - name: Host
+                value: KubernetesLivenessProbe
+          initialDelaySeconds: 20
         readinessProbe:
           httpGet:
-            path: /
+            path: /api/healthz
             port: 80
             httpHeaders:
-            - name: Custom-Header
-              value: AllGood
-          initialDelaySeconds: 5
-          periodSeconds: 3
+              - name: Host
+                value: KubernetesLivenessProbe
+          initialDelaySeconds: 20
         resources:
           {{- toYaml .Values.resources | nindent 12 }}
       {{- with .Values.nodeSelector }}

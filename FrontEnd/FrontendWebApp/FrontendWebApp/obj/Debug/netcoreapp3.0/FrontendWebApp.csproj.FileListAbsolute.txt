@@ -101,7 +101,6 @@ D:\Users\z003w9ja\Source\GitHub\Workspaces\AKS\FrontEnd\FrontendWebApp\FrontendW
 D:\Users\z003w9ja\Source\GitHub\Workspaces\AKS\FrontEnd\FrontendWebApp\FrontendWebApp\bin\Debug\netcoreapp3.0\runtimes\unix\lib\netcoreapp2.0\System.Runtime.Caching.dll
 D:\Users\z003w9ja\Source\GitHub\Workspaces\AKS\FrontEnd\FrontendWebApp\FrontendWebApp\bin\Debug\netcoreapp3.0\runtimes\win\lib\netcoreapp2.0\System.Runtime.Caching.dll
 D:\Users\z003w9ja\Source\GitHub\Workspaces\AKS\FrontEnd\FrontendWebApp\FrontendWebApp\bin\Debug\netcoreapp3.0\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
-D:\Users\z003w9ja\Source\GitHub\Workspaces\AKS\FrontEnd\FrontendWebApp\FrontendWebApp\obj\Debug\netcoreapp3.0\FrontendWebApp.csprojAssemblyReference.cache
 D:\Users\z003w9ja\Source\GitHub\Workspaces\AKS\FrontEnd\FrontendWebApp\FrontendWebApp\obj\Debug\netcoreapp3.0\staticwebassets\FrontendWebApp.StaticWebAssets.Manifest.cache
 D:\Users\z003w9ja\Source\GitHub\Workspaces\AKS\FrontEnd\FrontendWebApp\FrontendWebApp\obj\Debug\netcoreapp3.0\staticwebassets\FrontendWebApp.StaticWebAssets.xml
 D:\Users\z003w9ja\Source\GitHub\Workspaces\AKS\FrontEnd\FrontendWebApp\FrontendWebApp\obj\Debug\netcoreapp3.0\FrontendWebApp.MvcApplicationPartsAssemblyInfo.cache
