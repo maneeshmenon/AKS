@@ -26,7 +26,7 @@ spec:
       volumes:
       - name: pvcstorage
         persistentVolumeClaim:
-        claimName: aks-demo-data {{ .Values.persistentvolumeclaim.name }}
+        claimName: {{ .Values.persistentvolumeclaim.name }}
       containers:
       - name: backendservice
         image: "{{ .Values.image.repository }}:{{ .Values.image.tag }}"
