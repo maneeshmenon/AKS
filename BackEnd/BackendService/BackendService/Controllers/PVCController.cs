@@ -29,10 +29,15 @@ namespace BackendService.Controllers
 
             if (dir.Exists)
             {
-                var file = new FileInfo(Path.Combine(dir.FullName, "ReadMe.txt"));
+                FileInfo file = new FileInfo(Path.Combine(dir.FullName, "ReadMe.txt"));
 
                 if (!file.Exists)
                 {
+                    using (FileStream fs = file.Create())
+                    {
+                        //May be add few lines if required!
+                    }
+
                     using (Stream stream = file.OpenWrite())
                     {
                         using (StreamWriter writer = new StreamWriter(stream))
@@ -75,7 +80,15 @@ namespace BackendService.Controllers
 
             if (dir.Exists)
             {
-                var file = new FileInfo(Path.Combine(dir.FullName, "file1.txt"));
+                FileInfo file = new FileInfo(Path.Combine(dir.FullName, "file1.txt"));
+
+                if (!file.Exists)
+                {
+                    using (FileStream fs = file.Create())
+                    {
+                        //May be add few dummy lines if required!
+                    }
+                }
 
                 using (Stream stream = file.Open(FileMode.Truncate))
                 {
