@@ -7,6 +7,8 @@ global:
   tier: backend
   track: daily 
 
+persistentvolumeclaim:
+  name: aks-demo-data
 
 replicaCount: 1
 

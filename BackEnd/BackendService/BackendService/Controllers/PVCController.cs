@@ -23,39 +23,80 @@ namespace BackendService.Controllers
 
         public string GetFileInfo()
         {
+            System.Text.StringBuilder sb = new System.Text.StringBuilder();
+
+            DirectoryInfo dir = new DirectoryInfo("/mnt/azurediskdata");            
+
+            if (dir.Exists)
+            {
+                var file = new FileInfo(Path.Combine(dir.FullName, "ReadMe.txt"));
+
+                if (!file.Exists)
+                {
+                    using (Stream stream = file.OpenWrite())
+                    {
+                        using (StreamWriter writer = new StreamWriter(stream))
+                        {
+                            writer.WriteLine("This is a sample text message from a file named ReadMe.txt created at a mounted path");
+                            writer.WriteLine("Path of the mounted volume is /mnt/azurediskdata");
+
+                            writer.WriteLine("");
+                            writer.WriteLine("");
+                            
+                            writer.WriteLine("To view the file's contents using Cloud Shell, execute the following commands:");
+                            writer.WriteLine("$kubectl exec -it <pod name> --/bin/bash");
+                            writer.WriteLine("$cd /mnt/azurediskdata");
+                            writer.WriteLine("$cat ReadMe.yaml");
+                        }
+                    }                    
+                }
+
+                foreach (System.IO.FileInfo fi in dir.GetFiles())
+                {
+                    if (fi.Name.Equals("ReadMe.txt"))
+                    {
+                        using (System.IO.StreamReader reader = fi.OpenText())
+                        {
+                            sb.AppendLine(reader.ReadToEnd());
+                        }
+                    }
+                }
+            }
+
+            return sb.ToString();
+        }
+
+
+        public string SaveToFile(string message)
+        {
+            System.Text.StringBuilder sb = new System.Text.StringBuilder();
 
             DirectoryInfo dir = new DirectoryInfo("/mnt/azurediskdata");
 
-            var file = new FileInfo(Path.Combine(dir.FullName, "file1.txt"));
-            
-            if (!file.Exists)
+            if (dir.Exists)
             {
-                using (Stream stream = file.OpenWrite())
-                using (StreamWriter writer = new StreamWriter(stream))
-                {
-                    writer.WriteLine("This is a sample text message from a file named file1.txt created at a mounted path");
-                    writer.WriteLine("Path of the mounted volume is /mnt/azurediskdata");
-                    writer.WriteLine("");
-                    writer.WriteLine("");
-                    writer.WriteLine("To view the file's contents using Cloud Shell, execute the following commands:");
-                    writer.WriteLine("$kubectl exec -it <pod name> --/bin/bash");
-                    writer.WriteLine("$cd /mnt/azurediskdata");
-                    writer.WriteLine("$cat file1.yaml");
-                }
-            }
-            
-            System.Text.StringBuilder sb = new System.Text.StringBuilder();
+                var file = new FileInfo(Path.Combine(dir.FullName, "file1.txt"));
 
-            foreach (System.IO.FileInfo fi in dir.GetFiles())
-            {
-                if(fi.Name.Equals("file1.txt"))
+                using (Stream stream = file.Open(FileMode.Truncate))
                 {
-                    using (System.IO.StreamReader reader = fi.OpenText())
+                    using (StreamWriter writer = new StreamWriter(stream))
                     {
-                        sb.AppendLine(reader.ReadToEnd());
+                        writer.WriteLine(message);
+
                     }
                 }
 
+                foreach (System.IO.FileInfo fi in dir.GetFiles())
+                {
+                    if (fi.Name.Equals("file1.txt"))
+                    {
+                        using (System.IO.StreamReader reader = fi.OpenText())
+                        {
+                            sb.AppendLine(reader.ReadToEnd());
+                        }
+                    }
+
+                }
             }
 
             return sb.ToString();

@@ -12,6 +12,10 @@ spec:
       tier: {{ .Values.global.tier }}
       track: {{ .Values.global.track }}
   replicas: {{ .Values.replicaCount }}
+  strategy:
+    type: RollingUpdate
+    rollingUpdate:
+      maxUnavailable: 30%
   template:
     metadata:
       labels:
@@ -19,10 +23,17 @@ spec:
         tier: {{ .Values.global.tier }}
         track: {{ .Values.global.track }}
     spec:
+      volumes:
+      - name: pvcstorage
+        persistentVolumeClaim:
+        claimName: aks-demo-data {{ .Values.persistentvolumeclaim.name }}
       containers:
       - name: backendservice
         image: "{{ .Values.image.repository }}:{{ .Values.image.tag }}"
         imagePullPolicy: {{ .Values.image.pullPolicy }}
+        volumeMounts:
+         - name: pvcstorage
+           mountPath: "/mnt/azurediskdata"
         ports:
          - name: http
            containerPort: 80
@@ -48,7 +59,7 @@ spec:
             port: 80
             httpHeaders:
               - name: Host
-                value: KubernetesLivenessProbe
+                value: KubernetesReadinessProbe
           initialDelaySeconds: 20
         resources:
           {{- toYaml .Values.resources | nindent 12 }}

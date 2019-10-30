@@ -12,6 +12,10 @@ spec:
       tier: {{ .Values.global.tier }}
       track: {{ .Values.global.track }}
   replicas: {{ .Values.replicaCount }}
+  strategy:
+    type: RollingUpdate
+    rollingUpdate:
+      maxUnavailable: 30%
   template:
     metadata:
       labels:

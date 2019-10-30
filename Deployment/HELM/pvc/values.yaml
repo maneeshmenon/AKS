@@ -1,0 +1,11 @@
+# Default values for pvc
+# This is a YAML-formatted file.
+# Declare variables to be passed into your templates.
+storageclass:
+  name: azure-disk
+
+persistentvolumeclaim:
+  name: aks-demo-data
+
+storagespace: 1Gi
+

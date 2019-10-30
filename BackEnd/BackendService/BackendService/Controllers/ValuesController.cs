@@ -14,7 +14,12 @@ namespace BackendService.Controllers
         [HttpGet]
         public ActionResult<IEnumerable<string>> Get()
         {
-            return new string[] { "value1", "value2" };
+            string[] strArray = new string[] { "value1", "value2" };
+
+            //if a volume is mounted, then save the result to a file
+            new PVCController().SaveToFile(string.Join(" , ", strArray));
+
+            return strArray;
         }
 
         // GET api/values/5

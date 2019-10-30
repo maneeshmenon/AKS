@@ -24,6 +24,9 @@ namespace BackendService.Controllers
 
             string str = await MakeWebRequest();
 
+            //if a volume is mounted, then save the result to a file
+            new PVCController().SaveToFile(str);
+
             return str;
         }
 

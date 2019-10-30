@@ -1,12 +1,16 @@
 ﻿
 @{
-    ViewData["Title"] = "Display data from public network as well as private network";
+    ViewData["Title"] = "Display data retrieved by the containerized backend service";
 }
 
 <h3>@ViewData["Title"]</h3>
 <br />
-<p>Note: The front end web application invokes a backend service. The information displayed below is retrieved by the backend service</p>
-<p>Note: You may choose to display information from either public network or private network</p>
+<p>Note: The Backend service supports retrival from three APIs. To choose the desired API, refer this application's "appsettings.json"</p>
+<p>Note: If the retrieved information is also saved in a mounted volume, execute the below commands to view the file:</p>
+<p>$kubectl exec -it 'backend_service_pod_name' -- /bin/bash</p>
+<p>$cd /mnt/azurediskdata</p>
+<p>$dir</p>
+<p>$cat 'file_name' </p>
 <br />
 
 <h3>@ViewData["Message"]</h3>
