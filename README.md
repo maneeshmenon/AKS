@@ -11,6 +11,35 @@ Each script executed in an ordered fashion helps deploy the frontend and backend
 
 
 A brief about learning: In Progress
+1. Pod: https://kubernetes.io/docs/concepts/workloads/pods/
+   A Pod (as in a pod of whales or pea pod) is a group of one or more containers (such as Docker containers), with shared storage/network, and a specification for how to run the containers.
+
+2. Deployment: https://kubernetes.io/docs/concepts/workloads/controllers/deployment/
+   A Deployment provides declarative updates for Pods and ReplicaSets.
+
+3. Service: https://kubernetes.io/docs/concepts/services-networking/service/
+   An abstract way to expose an application running on a set of Pods as a network service
+
+4. Namespace: https://kubernetes.io/docs/concepts/overview/working-with-objects/namespaces/
+   Kubernetes supports multiple virtual clusters backed by the same physical cluster. These virtual clusters are called namespaces
+
+5. Nginx Ingress Controller: 
+   https://kubernetes.io/docs/concepts/services-networking/ingress-controllers/
+   https://www.nginx.com/products/nginx/kubernetes-ingress-controller
+   With the NGINX Ingress Controller for Kubernetes, you get basic load balancing, SSL/TLS termination, support for URI rewrites, 
+   and upstream SSL/TLS encryption
+
+6. Persistent Volume Claim   
+   https://kubernetes.io/docs/concepts/storage/persistent-volumes/
+   A persistent volume is a piece of storage in the cluster that has been provisioned by an administrator or dynamically provisioned using Storage Classes. 
+   A persistent volume claim is a request for storage by a user.
+
+7. Typical use cases for deployment
+   1. Create a deployment to rollout a replica set
+   2. Rollback to an earlier deployment revision
+   3. Scale up / down deployment
+   4. Liveness and Readiness probe
+
 
 
 
