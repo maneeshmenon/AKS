@@ -42,12 +42,12 @@ Pre-requisites
 
 Perform Build using Azure DevOps
 ================================
-Step 1: Create an account in Azure DevOps. For example 'https://dev.azure.com/maneeshmenon/'
-Step 2: Create a project in the account
-Step 3: Under Project Settings, create a service connection named 'serviceconnectioncontainerregistry'. This is to gain access to ACS 
-Step 4: Using pipelines -> build, create two build pipelines. Use the following YAML to perform build
-    a. azure-pipelines-build-frontend.yml
-		b. azure-pipelines-build-backend.yml
+1. Create an account in Azure DevOps. For example 'https://dev.azure.com/maneeshmenon/'
+2. Create a project in the account
+3. Under Project Settings, create a service connection named 'serviceconnectioncontainerregistry'. This is to gain access to ACS 
+4. Using pipelines -> build, create two build pipelines. Use the following YAML to perform build
+   a. azure-pipelines-build-frontend.yml
+   b. azure-pipelines-build-backend.yml
 
 Note: While performing the build operation, choose your github repository as the source
 
@@ -55,5 +55,5 @@ Note: While performing the build operation, choose your github repository as the
 Deploy
 ======
 
-Step 1: Ensure that the config file is updated. Location of the file is gitclouddrive -> AKS -> Deployment -> DeploymentScripts -> config.conf
-Step 2: Execute the bash scripts in the chronological order
+1. Ensure that the config file is updated. Location of the file is gitclouddrive -> AKS -> Deployment -> DeploymentScripts -> config.conf
+2. Execute the bash scripts in the chronological order
