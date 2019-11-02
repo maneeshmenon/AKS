@@ -17,7 +17,6 @@ A brief about learning: In Progress
 
 
 
-About using this github repository
 
 Download Source
 ===============
