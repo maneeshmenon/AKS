@@ -55,5 +55,6 @@ Note: While performing the build operation, choose your github repository as the
 Deploy
 ======
 
-1. Ensure that the config file is updated. Location of the file is gitclouddrive -> AKS -> Deployment -> DeploymentScripts -> config.conf
+1. Ensure that the config file is updated. 
+   Location of the file is gitclouddrive -> AKS -> Deployment -> DeploymentScripts -> config.conf
 2. Execute the bash scripts in the chronological order
