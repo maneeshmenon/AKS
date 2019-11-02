@@ -20,13 +20,13 @@ A brief about learning: In Progress
 
 Download Source
 ===============
-Step 1: Open Azure Portal and setup Cloud Shell
-Step 2: Create a directory name gitclouddrive
-Step 3: In the new directory created, clone git source by executing the command 'git clone https://github.com/maneeshmenon/AKS.git'
-Step 4: Take note of important folders
+1. Open Azure Portal and setup Cloud Shell
+2. Create a directory name gitclouddrive
+3. In the new directory created, clone git source by executing the command 'git clone https://github.com/maneeshmenon/AKS.git'
+4. Take note of important folders
     1. gitclouddrive -> AKS -> Deployment -> DeploymentScripts has all the bash scripts
-		2. gitclouddrive -> AKS -> Deployment -> HELM has Charts as required by HELM
-		3. gitclouddrive -> AKS -> Deployment -> KUBECTL has metadata as required by KUBECTL
+    2. gitclouddrive -> AKS -> Deployment -> HELM has Charts as required by HELM
+    3. gitclouddrive -> AKS -> Deployment -> KUBECTL has metadata as required by KUBECTL
 
 Note: Push the downloaded source to your preferred github repository. It will be useful during the build.
 
