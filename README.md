@@ -42,11 +42,6 @@ A brief about learning: In Progress
 
 
 
-
-
-
-
-
 Download Source
 ===============
 1. Open Azure Portal and setup Cloud Shell
@@ -83,7 +78,14 @@ Note: While performing the build operation, choose your github repository as the
 
 Deploy
 ======
-
 1. Ensure that the config file is updated. 
    Location of the file is gitclouddrive -> AKS -> Deployment -> DeploymentScripts -> config.conf
 2. Execute the bash scripts in the chronological order
+
+
+Testing
+=======
+1. Browse the following : https://<FQDN DNS name of load balancer>
+2. Browse the following : https://<FQDN DNS name of load balancer>/frontendwebapp
+3. Change the following to test further
+   1. Select the desired backend service using appsettings.json file in the front end web application
