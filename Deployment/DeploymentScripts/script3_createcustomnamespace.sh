@@ -13,5 +13,5 @@ az account set --subscription $subscription
 #kubectl apply -f ~/gitclouddrive/AKS/Deployment/KUBECTL/DeployNamespace.yaml
 
 #approach 2: Using HELM
-helm install ~/gitclouddrive/AKS/Deployment/HELM/customnamespace
+helm install aks-demo-namespace ~/gitclouddrive/AKS/Deployment/HELM/customnamespace
 
