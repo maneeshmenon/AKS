@@ -14,5 +14,5 @@ publicipresourcegroupname="MC$delimiter$aksresourcegroup$delimiter$aksname$delim
 echo $publicipresourcegroupname
 
 #create public ip address resource
-az network public-ip create --resource-group $publicipresourcegroupname --name $publicipresourcename --allocation-method static --query publicIp.ipAddress -o tsv
+az network public-ip create --resource-group $publicipresourcegroupname --name $publicipresourcename --sku Standard --allocation-method static --query publicIp.ipAddress -o tsv
 
