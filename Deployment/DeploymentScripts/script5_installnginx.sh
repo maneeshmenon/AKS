@@ -22,8 +22,11 @@ echo $publicipresourcegroupname
 IP=$(az network public-ip show --resource-group $publicipresourcegroupname --name $publicipresourcename  | grep ipAddress | cut -d':' -f 2 | cut -d',' -f 1 | cut -d'"' -f 2)
 echo $IP
 
+#update repo with stable nginx
+helm repo add stable https://kubernetes-charts.storage.googleapis.com/
+
 #install nginx
-helm install stable/nginx-ingress --namespace $customnamespace --name aks-demo --set controller.replicaCount=1 --set rbac.create=false --set controller.service.loadBalancerIP=$IP
+helm install aks-demo stable/nginx-ingress --namespace $customnamespace --set controller.replicaCount=1 --set rbac.create=false --set controller.service.loadBalancerIP=$IP
 
 #exit the script only when the load balancer is assigned the ip address.
 sleep 5s
