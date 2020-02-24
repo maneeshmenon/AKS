@@ -23,17 +23,17 @@ spec:
         tier: {{ .Values.global.tier }}
         track: {{ .Values.global.track }}
     spec:
-      volumes:
-      - name: pvcstorage
-        persistentVolumeClaim:
-        claimName: {{ .Values.persistentvolumeclaim.name }}
+      #volumes:
+      #- name: pvcstorage
+      #  persistentVolumeClaim:
+      #  claimName: {{ .Values.persistentvolumeclaim.name }}
       containers:
       - name: backendservice
         image: "{{ .Values.image.repository }}:{{ .Values.image.tag }}"
         imagePullPolicy: {{ .Values.image.pullPolicy }}
-        volumeMounts:
-         - name: pvcstorage
-           mountPath: "/mnt/azurediskdata"
+        #volumeMounts:
+         #- name: pvcstorage
+         #  mountPath: "/mnt/azurediskdata"
         ports:
          - name: http
            containerPort: 80
