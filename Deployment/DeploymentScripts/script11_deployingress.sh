@@ -11,4 +11,4 @@
 #Deploy ingres with TLS
 ### Note: secret/tls-ingress-secret is used here ###
 #kubectl create -f ~/gitclouddrive/AKS/Deployment/KUBECTL/DeployIngressWithTLS.yaml
-helm install ~/gitclouddrive/AKS/Deployment/HELM/ingresswithtls
+helm install aks-demo-ingress ~/gitclouddrive/AKS/Deployment/HELM/ingresswithtls
