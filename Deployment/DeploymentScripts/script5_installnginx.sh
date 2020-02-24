@@ -26,7 +26,11 @@ echo $IP
 helm repo add stable https://kubernetes-charts.storage.googleapis.com/
 
 #install nginx
-helm install aks-demo stable/nginx-ingress --namespace $customnamespace --set controller.replicaCount=1 --set rbac.create=false --set controller.service.loadBalancerIP=$IP
+#helm install aks-demo stable/nginx-ingress --namespace $customnamespace --set controller.replicaCount=1 --set rbac.create=false --set controller.service.loadBalancerIP=$IP
+helm install aks-demo stable/nginx-ingress --namespace $customnamespace --set controller.replicaCount=1 --set rbac.create=false --set controller.
+nodeSelector."beta\.kubernetes\.io/os"=linux --set defaultBackend.nodeSelector."beta\.kubernetes\.io/os"=linux --set controller.service.loadBalan
+cerIP=$IP
+
 
 #exit the script only when the load balancer is assigned the ip address.
 sleep 5s
